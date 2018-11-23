@@ -1,11 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import os#.path
 
 i = 0
 with open("user_info.txt", "r") as f:
     for x in f:
         if i == 0:
-            UserID = x.strip('\n')
+            UID = x.strip('\n')
             i += 1
             continue
         if i == 1:
@@ -17,12 +18,13 @@ with open("user_info.txt", "r") as f:
             i += 1
             continue
 
+
 driver = webdriver.Chrome()
-driver.get("https://banweb7.nmt.edu/pls/PROD/twbkwbis.P_ValLogin")
+driver.get("http://banweb7.nmt.edu/pls/PROD/twbkwbis.P_ValLogin")
 sid = driver.find_element_by_name("sid")
 pw = driver.find_element_by_name("PIN")
 
-sid.send_keys(UserID)
+sid.send_keys(UID)
 pw.send_keys(PIN)
 pw.send_keys(Keys.RETURN)
 

@@ -1,0 +1,12 @@
+
+*.pyproj
+*.pyc
+*.zip
+*.toc
+*.pkg
+*.pyz
+*.manifest
+*.html
+*.spec
+*.sln
+*.txt

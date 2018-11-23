@@ -1,3 +1,3 @@
-900 Number
-Password
-Apin
+user_id
+user_password
+apin
